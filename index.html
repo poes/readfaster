@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Read Faster</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="main.js"></script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Read Faster!</h1>
+
+        <div class="tab">
+            <button class="tablinks active" onclick="openTab(event, 'Test')">Test</button>
+            <button class="tablinks" onclick="openTab(event, 'Use')">Use</button>
+        </div>
+        <div class="tabcontainer">
+            <div id="Test" class="tabcontent" style="display: block;">
+                <p>Research shows that you read faster if your eyes stay at the same point while reading. 
+                    I've seen videos that demonstrate this idea and it worked pretty well.
+                    If you want to test this yourself, please do! 
+                    Press "start" when you start reading the text and "stop" when you are done.
+                    You will be given a time in seconds which you can compare with the next test.
+                </p>
+                <div class="line"></div>
+                <div class="test">
+                    <div class="testcontainer">
+                        <div class="testtextbox" style="height: 150px;">
+                            <a id="srtext">Click start!</a>
+                        </div>
+                        <h3 style="display: inline-block;">Normal Reading</h3> <button id="srb" onclick="srStart()">start</button>
+                    </div>
+                    <div class="testcontainer" style="float: right;">
+                        <div class="testtextbox" style="height: 150px; text-align: center;">
+                            <a id="frtext" style="font-size: 30px; margin-top: 55px; position: absolute; transform: translate(-50%, 0);">Click start!</a>
+                        </div>
+                        <h3 style="display: inline-block;">Fast Reading</h3> <button id="frb" onclick="frStart()">start</button><br>
+                        <div style="width: 100%">
+                            <input type="range" min="1" max="300" id="slider" style="width: 100%;">
+                            <input type="text" id="nrms" value="150" style="width: 100%;" disabled>
+                        </div>
+                    </div>
+                    <br class="clear" />
+                </div><br><br>
+                <div class="line"></div>
+                
+                <div class="test" style="height: 10px;">
+                    <div class="testcontainer" id="resultsr">
+                    </div>
+                    <div class="testcontainer" id="resultfr" style="float: right;">
+                    </div>
+                    <br class="clear" />
+                </div>
+
+                <br class="clear" />
+            </div>
+            
+            <div id="Use" class="tabcontent">
+                <div class="inputtext">
+                    <input id="realip" type="text" style="width: 99%; height: 100%;" placeholder="input text!">
+                </div>
+                <div class="testtextbox" style="height: 300px; text-align: center;">
+                    <a id="frrtext" style="font-size: 30px; margin-top: 130px; position: absolute; transform: translate(-50%, 0);">Click start!</a>
+                </div>
+                <h3 style="display: inline-block;">Fast Reading</h3> <button id="frrb" onclick="frrStart()">start</button><br>
+                <div style="width: 100%">
+                    <input type="range" min="1" max="300" id="sliderr" style="width: 100%;">
+                    <input type="text" id="nrmsr" value="150" style="width: 100%;" disabled>
+                </div>
+                
+                <br class="clear" />
+                <div class="test" style="height: 30px;">
+                    <div id="resultfrr" style="width: 100%;">
+                    </div>
+                </div>
+                <br class="clear" />
+            </div>
+        </div>
+
+        <div id="footer">made with <img src="heart.png"> by <a href="https://github.com/poes">poes@github</a></div>
+    </body>
+</html> 
